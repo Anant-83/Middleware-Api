@@ -6,7 +6,7 @@ const { ApolloServer } = require('apollo-server-express');
 const gqschema = require('../Database/graphql_schema');
 const resolvers = require('../resolvers')
 
-
+    
 async function startApolloServer(app) {
     const server = new ApolloServer({ typeDefs: gqschema, resolvers: resolvers });
     await server.start();
